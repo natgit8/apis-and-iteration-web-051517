@@ -34,14 +34,15 @@ def get_films(films_urls)
 end
 
 def parse_character_movies(films_hash)
-
-  #iterate through films_parse array and puts out a list of film_titles, film_characters, etc
+  films_hash.each do |film|
+    puts film["title"]
+    # binding.pry
+  end
   # some iteration magic and puts out the movies in a nice list
 end
 
 def show_character_movies(character)
   films_hash = get_character_movies_from_api(character)
-  binding.pry
   parse_character_movies(films_hash)
 end
 
